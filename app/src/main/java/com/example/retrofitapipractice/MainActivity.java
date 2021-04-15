@@ -46,9 +46,8 @@ public class MainActivity extends AppCompatActivity  implements ViewInterface{
    */
 
     @Override
-    public void loadData(ArrayList<AllMovies> allMovies) {
-
-
+    public void loadData(AllMovies allMovies) {
+        progressDialog.hide();
         MyBaseAdapter adp=new MyBaseAdapter(this,allMovies);
         ListView listView=findViewById(R.id.listView);
         listView.setAdapter(adp);
