@@ -1,15 +1,14 @@
 package com.example.retrofitapipractice;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity  implements ViewInterface{
@@ -19,16 +18,18 @@ public class MainActivity extends AppCompatActivity  implements ViewInterface{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        MyDataClass myDataClass=new MyDataClass(this);
+       // MyDataClass myDataClass=new MyDataClass(this);
+        DataModal modal=new DataModal();
+        modal.getUpComingMovies(this);
         progressDialog=new ProgressDialog(this);
         progressDialog.setMessage("Loading Data....");
         progressDialog.setCancelable(false);
         progressDialog.setTitle("Loading!");
         progressDialog.show();
-        myDataClass.readDataFromServer();
+     //   myDataClass.readDataFromServer();
         }
 
-    @Override
+   /* @Override
     public void loadData(ArrayList<Posts> data) {
         progressDialog.hide();
         LinearLayout linearLayout=findViewById(R.id.linearLayout1);
@@ -41,6 +42,17 @@ public class MainActivity extends AppCompatActivity  implements ViewInterface{
             textView2.setText(data.get(i).body);
             linearLayout.addView(view);
         }
+}
+   */
 
+    @Override
+    public void loadData(ArrayList<AllMovies> allMovies) {
+
+
+        MyBaseAdapter adp=new MyBaseAdapter(this,allMovies);
+        ListView listView=findViewById(R.id.listView);
+        listView.setAdapter(adp);
     }
+
+
 }

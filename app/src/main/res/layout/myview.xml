@@ -5,16 +5,25 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/border"
-    android:padding="10dp"
+
     >
 
-    <TextView
+    <ImageView
+        android:id="@+id/imageView"
+        android:scaleType="fitXY"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:background="#ff0000"
+        />
+
+  <!--  <TextView
         android:id="@+id/text1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="22dp"
         android:textColor="@color/black"
         android:text="Title"
+        android:layout_weight="0"
         />
 
     <TextView
@@ -25,6 +34,6 @@
         android:textSize="20dp"
         android:text="Description"
         android:textColor="@color/black"
+        android:layout_weight="1.5"
         />
-
-</LinearLayout>
+--></LinearLayout>

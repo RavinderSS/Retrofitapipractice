@@ -11,7 +11,7 @@ import retrofit2.http.GET;
 
 public class MyDataClass {
 
-    String baseUrl="https://jsonplaceholder.typicode.com/";
+  /*  String baseUrl="https://jsonplaceholder.typicode.com/";
     ViewInterface viewInt;
     MyDataClass(ViewInterface viewInterface){
         viewInt=viewInterface;
@@ -36,5 +36,5 @@ public class MyDataClass {
 interface RetrofitInterface{
         @GET("posts")
         Call<ArrayList<Posts>> getDataOfComments();
-}
+}*/
 }
