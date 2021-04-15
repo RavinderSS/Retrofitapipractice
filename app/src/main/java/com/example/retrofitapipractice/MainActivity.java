@@ -18,7 +18,9 @@ public class MainActivity extends AppCompatActivity  implements ViewInterface{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-       // MyDataClass myDataClass=new MyDataClass(this);
+
+        // MyDataClass myDataClass=new MyDataClass(this);
+
         DataModal modal=new DataModal();
         modal.getUpComingMovies(this);
         progressDialog=new ProgressDialog(this);
@@ -26,7 +28,9 @@ public class MainActivity extends AppCompatActivity  implements ViewInterface{
         progressDialog.setCancelable(false);
         progressDialog.setTitle("Loading!");
         progressDialog.show();
-     //   myDataClass.readDataFromServer();
+
+        //   myDataClass.readDataFromServer();
+
         }
 
    /* @Override

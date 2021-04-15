@@ -4,15 +4,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/border"
-
     >
 
     <ImageView
         android:id="@+id/imageView"
         android:scaleType="fitXY"
         android:layout_width="match_parent"
-        android:layout_height="500dp"
+        android:layout_height="match_parent"
         android:background="#ff0000"
         />
 
@@ -36,4 +34,5 @@
         android:textColor="@color/black"
         android:layout_weight="1.5"
         />
---></LinearLayout>
+-->
+</LinearLayout>
