@@ -5,6 +5,7 @@ import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.GridView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.ProgressBar;
@@ -48,14 +49,14 @@ public class MainActivity extends AppCompatActivity  implements ViewInterface{
         }
 }
    */
-
     @Override
     public void loadData(AllMovies allMovies) {
         progressDialog.hide();
         MyBaseAdapter adp=new MyBaseAdapter(this,allMovies);
-        ListView listView=findViewById(R.id.listView);
-        listView.setAdapter(adp);
+        GridView gridView=findViewById(R.id.gridView);
+        gridView.setAdapter(adp);
+
+        //ListView listView=findViewById(R.id.listView);
+        //listView.setAdapter(adp);
     }
-
-
 }

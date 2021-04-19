@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     >
 
     <ImageView
@@ -14,25 +13,29 @@
         android:background="#BAB328"
         />
 
-  <!--  <TextView
-        android:id="@+id/text1"
+    <TextView
+        android:id="@+id/titleTV"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="22dp"
-        android:textColor="@color/black"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:textSize="15dp"
+        android:textColor="@color/white"
         android:text="Title"
-        android:layout_weight="0"
+        android:textStyle="bold"
         />
 
-    <TextView
-        android:id="@+id/text2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:textSize="20dp"
-        android:text="Description"
-        android:textColor="@color/black"
-        android:layout_weight="1.5"
-        />
--->
-</LinearLayout>
+    <!--
+        <TextView
+            android:id="@+id/text2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textSize="20dp"
+            android:text="Description"
+            android:textColor="@color/black"
+            android:layout_weight="1.5"
+            />
+    -->
+
+</RelativeLayout>

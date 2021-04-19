@@ -1,7 +1,6 @@
 package com.example.retrofitapipractice;
 
 import java.util.ArrayList;
-
 public class AllMovies  {
     int page;
     ArrayList<Movie> results=new ArrayList<>();

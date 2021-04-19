@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 
@@ -39,9 +40,10 @@ public class MyBaseAdapter extends BaseAdapter {
         LayoutInflater inflater=LayoutInflater.from(ctx);
         myview=inflater.inflate(R.layout.myview,null);
         ImageView imageView=myview.findViewById(R.id.imageView);
+        TextView titleTV=myview.findViewById(R.id.titleTV);
         System.out.println("http://image.tmdb.org/t/p/w185"+movies.results.get(position).poster_path);
         Picasso.get().load("https://image.tmdb.org/t/p/w185"+movies.results.get(position).poster_path).into(imageView);
-
+        titleTV.setText(movies.results.get(position).title);
         return myview;
     }
 }
